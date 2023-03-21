@@ -4,11 +4,12 @@ pipeline {
     environment {
         NPM_CONFIG_CACHE = "${WORKSPACE}/.npm"
     }
-    
+
     stages {
         stage('build') {
             steps {
-                sh 'npm install'
+                // sh 'rm -rf node_modules'
+                // sh 'npm install'
                 sh 'npm run build'
             }
         }
